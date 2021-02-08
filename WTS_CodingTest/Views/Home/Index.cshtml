@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row">
+    
+    <table>
+        <thead style="border-bottom:2px solid black; font-weight:600;">
+            <tr>
+                <td style="width: 3rem;">ID</td>
+                <td style="min-width:12rem;">Full Name</td>
+                <td style="min-width:12rem;">Weekly Hours</td>
+                <td style="min-width:12rem;">Monthly Hours</td>
+            </tr>
+        </thead>
+
+        @foreach(var item in ViewBag.DisplayItems)
+        {
+            <tr>
+                <td>@item.Employee_ID</td>
+                <td>@item.Employee_FullName</td>
+                <td>@item.Employee_Hours_Weekly</td>
+                <td>@item.Employee_Hours_Monthly</td>
+            </tr>
+        }
+
+    </table>
+
+</div>
